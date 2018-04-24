@@ -27,6 +27,7 @@ class ProductItem extends Component {
     this.setState({ detailView: false });
   };
 
+ 
   render() {
     const url = this.props.img;
 
@@ -55,15 +56,8 @@ class ProductItem extends Component {
                   <h3 id="description">{this.props.name}</h3>
                   <h2 id="priceDesc">{this.props.price.amount}zł</h2>
                   <p id="desc">{this.props.details.description}</p>
-
-                  <form>
-                    <input
-                      id='buttonAllegro'
-                      type="button"
-                      value="Przejdź do allegro"
-                      onclick="window.location.href='http://allegro.pl/buty-meskie-adidas-galaxy-4m-cp8822-rozne-rozmiary-i7231070112.html';"
-                    />
-                  </form>
+                   
+                   
                 </div>
               </div>
             </Modal>
