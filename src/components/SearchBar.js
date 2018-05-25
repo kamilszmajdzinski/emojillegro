@@ -22,29 +22,34 @@ class SearchBar extends Component {
 
   render() {
     return (
+      <div>
       <div className="formDiv">
-        <form onSubmit={this.handleSubmit}>
-          <span className="logo">
+          <div className="logo">
             {" "}
             emojillegr<span id="emoji">🤑</span>{" "}
-          </span>
-          <input
-            className="input"
-            type="text"
-            id="searchTerm"
-            name="searchTerm"
-            placeholder="Czego szukasz? 🤷"
-            onChange={this.onChange}
-          />
-          <button className="button" type="submit">
-            Szukaj
-          </button>
-        </form>
-
-        {this.props.products.length > 0 && (
-          <SortPanel term={this.state.searchTerm} />
-        )}
+          </div>
+          <div className='innerFormDiv'>
+          <form onSubmit={this.handleSubmit}>
+            <input
+              className="input"
+              type="text"
+              id="searchTerm"
+              name="searchTerm"
+              placeholder="Czego szukasz? 🤷"
+              onChange={this.onChange}
+            />
+            <button className="button" type="submit">
+              Szukaj
+            </button>
+          </form>
+        </div>
       </div>
+      <div className='sortPanelDiv' >
+      {this.props.products.length > 0 && (
+        <SortPanel term={this.state.searchTerm} />
+      )}
+    </div>
+    </div>
     );
   }
 }
